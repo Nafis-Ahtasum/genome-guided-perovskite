@@ -63,7 +63,7 @@ Each $A_2BB'X_6$ composition is represented using a compact, 13-feature unrelaxe
 
 
 
-## 🧪 Staged Inverse-Design Screening Funnel
+## 🧪 Staged  Screening Funnel
 
 <p align="center">
   <img src="figures/screening_funnel.png" alt="Screening Funnel and Landscape" width="85%"/>
