@@ -35,6 +35,16 @@ So we put together this ML screening pipeline. We trained surrogate models on 1,
 * For band gaps,  tuned XGBoost regressor .
 * We ended up with 5 DFT-confirmed, phase-stable semiconductors (all Ehull <= 0 meV/atom): Cs2CdSnBr6, Cs2CdSnI6, Cs2KGaI6, Rb2SnMnBr6, and Cs2AgAlBr6.
 
+### Validation Through DFT Calculation
+
+To close the loop and ensure that the machine-learning-prioritized candidates exhibit real physical and optoelectronic functionality, we performed comprehensive first-principles DFT validation on the final shortlisted compounds:
+
+* **Structural Optimization & Phase Purity:** Full geometry relaxations were run with DMol³ using the spin-polarized GGA-PBE functional and a DNP basis set. Simulated powder XRD patterns show sharp diffraction peaks and characteristic (111) superlattice reflections, confirming long-range rock-salt ordering of the B/B' sublattices without phase degradation.
+* **Thermodynamic Ground States:** All 5 validated compounds reside directly on or very close to the convex hull ($E_{\text{hull}} \le 0\text{ meV/atom}$), verifying 0 K thermodynamic phase stability.
+* **Electronic Dispersion & PDOS:** Band structure and projected density of states calculations confirm semiconducting behavior with valence bands dominated by halide $p$-states and conduction band minimums formed by metal $s/p$-states.
+* **Carrier Transport Properties:** Evaluated carrier effective masses and phonon-limited mobilities using the 3D Bardeen-Shockley deformation potential model, identifying ultralight electron masses in systems like $\text{Cs}_2\text{CdSnBr}_6$ ($m_e^* = 0.087\,m_0$).
+* **Full Optical Phenotype Suite:** Calculated complex dielectric functions $\epsilon(\omega)$, high optical absorption coefficients ($\alpha_{\text{peak}} \approx 10^5\text{ cm}^{-1}$), refractive indices $n(\omega)$, reflectivity $R(\omega)$, plasmon loss functions $L(\omega)$, and optical conductivities $\sigma(\omega)$ using CASTEP.
+
 
 
 ### The 13 Descriptors ("Genome")
