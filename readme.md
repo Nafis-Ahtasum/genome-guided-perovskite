@@ -31,8 +31,8 @@ So we put together this ML screening pipeline. We trained surrogate models on 1,
 ### Key notes & results
 
 * We generated 13,088 charge-balanced formulas (both A2B+B'3+X6 and A2B2+B'2+X6 types).
-* For stability classification, we tuned our Decision Tree specifically for high recall (Recall = 0.831, ROC-AUC = 0.93). We did this on purpose: in screening, a false positive just costs an extra DFT check, but a false negative throws away a good material completely.
-* For band gaps, our tuned XGBoost regressor hits R2 = 0.9317 and RMSE = 0.5144 eV.
+* For stability classification, we tuned our Decision Tree specifically for high recall . We did this on purpose: in screening, a false positive just costs an extra DFT check, but a false negative throws away a good material completely.
+* For band gaps,  tuned XGBoost regressor .
 * We ended up with 5 DFT-confirmed, phase-stable semiconductors (all Ehull <= 0 meV/atom): Cs2CdSnBr6, Cs2CdSnI6, Cs2KGaI6, Rb2SnMnBr6, and Cs2AgAlBr6.
 
 
