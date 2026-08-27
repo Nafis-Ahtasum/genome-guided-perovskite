@@ -51,15 +51,7 @@ We filtered the 13k compositions in stages:
 6. Practical filters: dropped toxic stuff (Pb, As, Be) and expensive noble metals -> 24 left
 7. DFT validation: full relaxations & electronic structure calculations -> 5 phase-stable semiconductors confirme
 
-### The 5 DFT-Validated Hits
 
-| Compound | Space Group | DFT Bandgap (eV) | m_e* (m0) | m_h* (m0) | eps_0 | Target Role |
-| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Cs2CdSnBr6** | P1 | 1.794 | 0.087 | 0.197 | 5.14 | PV absorber with light carrier masses |
-| **Cs2CdSnI6** | Fm-3m | 1.132 | 0.73 | 1.06 | 8.16 | Near-ideal PV bandgap & strong dielectric screening |
-| **Cs2KGaI6** | P1 | 0.696 | 0.95 | 1.24 | 4.58 | Narrow-gap / Near-IR sensor |
-| **Rb2SnMnBr6** | P1 | 1.237 | 0.18 | 2.10 | 6.15 | Asymmetric transport / spin-active device |
-| **Cs2AgAlBr6** | P1 | 1.096 | 0.17 | 1.06 | 4.57 | Auxiliary optoelectronic / window layer |
 
 
 
