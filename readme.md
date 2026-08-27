@@ -10,7 +10,7 @@ Official repository for the preprint:
 > Nafis Ahtasum, Sohanur Rahman Sohan, Md Mostaq Ahmed Himel, Md Zahid Hassan, Muhammad Harussani Moklis, Md Rafiul Alam Roni  
 > *arXiv preprint arXiv:2605.22887* (2026). [https://arxiv.org/abs/2605.22887](https://arxiv.org/abs/2605.22887)
 
----
+
 
 ## 📌 Overview
 
@@ -19,11 +19,11 @@ This repository implements a high-throughput, quantitative chemical-genome scree
 Starting from an unverified combinatorial space of **13,088 charge-balanced, lead-free compositions**, the workflow integrates geometric formability gating, 6-family chemical-genome descriptor encoding, evolutionary-algorithm-optimized machine learning surrogates, explainable AI (SHAP), and first-principles Density Functional Theory (DFT) phenotype closure.
 
 <p align="center">
-  <img src="[https://github.com/Nafis-Ahtasum/genome-guided-perovskite/blob/main/fig%203.png)" alt="Genome-Guided Discovery Workflow" width="85%"/>
+  <img src="fig%203.png" alt="Genome-Guided Discovery Workflow" width="85%"/>
 </p>
 <p align="center"><em>Figure 1: Hierarchical discovery framework combining chemical-space construction, halide-aware formability filtering, chemical-genome descriptor encoding, evolutionary ML surrogate modeling, multi-objective screening, and DFT phenotype closure.</em></p>
 
----
+
 
 ## 🎯 Key Highlights
 
