@@ -4,126 +4,103 @@
 [![arXiv:2605.22887](https://img.shields.io/badge/arXiv-2605.22887-b31b1b.svg)](https://arxiv.org/abs/2605.22887)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Official repository for the preprint:
+Official repository for the research preprint:
 
 > **Genome-Guided Interpretable Screening of Phase-Stable, Lead-Free Double Perovskite Absorbers for All-Inorganic Semiconductors, Sensors, and Photovoltaics with DFT-Validated Design Rules**  
-> Nafis Ahtasum, Sohanur Rahman Sohan, Md Mostaq Ahmed Himel, Md Zahid Hassan, Muhammad Harussani Moklis, Md Rafiul Alam Roni  
+> Nafis Ahtasum $^{1,2,*}$, Sohanur Rahman Sohan $^{1,3}$, Md. Mostaq Ahmed Himel $^{1,2}$, Md. Zahid Hassan $^{3}$, Muhammad Harussani Moklis $^{1,4,5}$, Masud Rana Rashel $^{6,7}$, Hasan Jamil $^{8}$, AKM Kamrul Islam $^{9}$, Mouhaydine Tlemcani $^{6}$  
 > *arXiv preprint arXiv:2605.22887* (2026). [https://arxiv.org/abs/2605.22887](https://arxiv.org/abs/2605.22887)
+
+
+
+### Author Affiliations
+$^{1}$ Center for Material, Climate and Energy, Research and Analysis Institute, RAI Initiative Ltd, Dhaka, Bangladesh  
+$^{2}$ Department of Apparel Engineering, Bangladesh University of Textiles, Dhaka-1208, Bangladesh  
+$^{3}$ Department of Textile Engineering Management, Bangladesh University of Textiles, Dhaka-1208, Bangladesh  
+$^{4}$ Department of Chemical and Environmental Engineering, Faculty of Engineering, Universiti Putra Malaysia, Serdang 43400, Selangor, Malaysia  
+$^{5}$ Energy Science and Engineering, Department of Transdisciplinary Science and Engineering, Institute of Science Tokyo, 2-12-1, Ookayama, Meguro-ku, Tokyo 152-8550, Japan  
+$^{6}$ Instrumentation and Control Laboratory, Center for sci-tech Research in Earth System and Energy, University of Évora, Portugal  
+$^{7}$ Department of Computer Science and Engineering, Daffodil International University, Bangladesh  
+$^{8}$ Department of Computer Science, University of Idaho, 875 Perimeter Drive, Moscow, ID 83844, USA  
+$^{9}$ Computational Science and Engineering, North Carolina A&T State University, Greensboro, North Carolina, USA  
+$^{*}$ *Corresponding author:* `nafisahtasum666@gmail.com`
 
 
 
 ## 📌 Overview
 
-This repository implements a high-throughput, quantitative chemical-genome screening pipeline to discover and evaluate stable, lead-free halide double perovskites ($A_2BB'X_6$) for advanced optoelectronic, sensing, and photovoltaic applications. 
+This repository implements an interpretable, genome-guided machine learning and Density Functional Theory (DFT) inverse-design framework to screen and discover phase-stable, lead-free all-inorganic double perovskites ($A_2BB'X_6$).
 
-Starting from an unverified combinatorial space of **13,088 charge-balanced, lead-free compositions**, the workflow integrates geometric formability gating, 6-family chemical-genome descriptor encoding, evolutionary-algorithm-optimized machine learning surrogates, explainable AI (SHAP), and first-principles Density Functional Theory (DFT) phenotype closure.
+Starting from a combinatorial library of **13,088 charge-balanced, lead-free compositions**, the workflow integrates geometric formability gating, a 4-cluster "Stability Genome" descriptor set, evolutionary-optimized surrogate models (Decision Tree & XGBoost), SHAP explainability, and comprehensive first-principles DFT phenotype closure.
 
 <p align="center">
   <img src="fig%203.png" alt="Genome-Guided Discovery Workflow" width="85%"/>
 </p>
-<p align="center"><em>Figure 1: Hierarchical discovery framework combining chemical-space construction, halide-aware formability filtering, chemical-genome descriptor encoding, evolutionary ML surrogate modeling, multi-objective screening, and DFT phenotype closure.</em></p>
+<p align="center"><em>Figure 1: Five-stage screening workflow combining chemical-space construction, descriptor-genome encoding, evolutionary ML surrogate modeling, multi-objective inverse-design screening, and DFT phenotype closure.</em></p>
 
 
 
 ## 🎯 Key Highlights
 
-* **13,088-Compound Library:** Combinatorial enumeration across homovalent ($A_2B^{2+}B'^{2+}X_6$) and heterovalent ($A_2B^+B'^{3+}X_6$) oxidation families.
-* **Recall-Prioritized Stability Classifier:** An evolutionary-tuned Decision Tree stability surrogate engineered for high stable-class recall (**Recall = 0.831**) to protect promising metastable phases ($\Delta E_{\text{hull}} \le 25\text{ meV/atom}$) from premature pruning.
-* **Bandgap Surrogate Regression:** A GA-optimized XGBoost regressor predicting scalar GGA-PBE electronic bandgaps with **$R^2 = 0.9317$** and **$\text{RMSE} = 0.5144\text{ eV}$**.
-* **XAI Design Heuristics:** SHAP feature attributions across 6 descriptor families that translate complex surrogate matrices into transferable mixing rules.
-* **7 DFT-Validated Endpoints:** Candidate space reduction down to 7 stable endpoints: $\text{Cs}_2\text{SnGeBr}_6$, $\text{Rb}_2\text{TeCuBr}_6$, $\text{Cs}_2\text{NiBaI}_6$, $\text{Cs}_2\text{AgInCl}_6$, $\text{K}_2\text{BePdF}_6$, $\text{K}_2\text{MnCdCl}_6$, and $\text{Cs}_2\text{GeSrBr}_6$.
-* **Suppressed Excitonic Drag:** Isolation of the post-transition-metal anomaly **$\text{Cs}_2\text{SnGeBr}_6$** ($E_g = 1.112\text{ eV}$, $\mu^* = 0.045\,m_0$, $\epsilon_1(0) = 7.54$), collapsing the exciton binding energy to **$\Delta E_{\text{xb}} = -10.76\text{ meV}$** (~90% reduction relative to $\text{Cs}_2\text{AgBiBr}_6$).
+* **Combinatorial Realization Space:** 13,088 unique charge-balanced formulas enumerated across heterovalent ($A_2B^+B'^{3+}X_6$) and homovalent ($A_2B^{2+}B'^{2+}X_6$) oxidation families.
+* **Recall-Optimized Stability Surrogate:** An evolutionary algorithm (EA)-tuned Decision Tree classifier achieving **ROC-AUC = 0.93** and a stable-class recall of **Recall = 0.831** to prevent premature loss of promising metastable phases ($E_{\text{hull}} \le 25\text{ meV/atom}$).
+* **Screening-Grade Bandgap Regressor:** An EA-tuned XGBoost regressor predicting scalar GGA-PBE electronic bandgaps with **$R^2 = 0.9317$** and **$\text{RMSE} = 0.5144\text{ eV}$**.
+* **Interpretable Stability Genome:** Descriptors grouped into 4 distinct physical categories—Packing, Bonding, Polarization, and Electronic Identity—to decode multi-axial property trade-offs.
+* **DFT-Validated Endpoints:** Staged constraint stacking narrows 13,088 compositions down to **5 phase-stable semiconductors**: $\text{Rb}_2\text{SnMnBr}_6$, $\text{Cs}_2\text{CdSnBr}_6$, $\text{Cs}_2\text{CdSnI}_6$, $\text{Cs}_2\text{KGaI}_6$, and $\text{Cs}_2\text{AgAlBr}_6$ ($E_{\text{hull}} \le 0\text{ meV/atom}$).
+* **Full Optical & Transport Suite:** Complete evaluation of carrier effective masses, deformation-potential mobilities, complex dielectric functions ($\epsilon_0 = 4.57\text{--}8.16$), optical absorption ($\alpha_{\text{peak}} \approx 10^5\text{ cm}^{-1}$), energy-loss plasmon fingerprints, and frequency-dependent optical conductivities.
 
----
 
-## 🧬 Chemical-Genome Descriptor Architecture
 
-Compositions are mapped into a 6-family unrelaxed "Chemical Genome" ($G \in \mathbb{R}^{M \times 6}$) derived purely from elemental and unrelaxed precursor states to prevent data leakage:
+## 🧬 Stability-Genome Descriptor Architecture
 
-| Gene Family | Representative Descriptors | Physical Meaning / Target Role |
-| :--- | :--- | :--- |
-| **Geometric Packing** | Ionic radii ($R_A, R_B, R_{B'}, R_X$), Tolerance factors ($t, \mu, \tau$) | Steric size compatibility, cage filling, octahedral packing feasibility |
-| **Framework Cohesion** | Bond dissociation energies ($BE_{M-X}$), Atomic formation enthalpies ($\Delta H_f$) | Metal-halide bonding robustness, framework persistence, phase stability |
-| **Polarity & Covalency** | Electronegativity contrasts ($\Delta\chi_{B-X}, \Delta\chi_{B'-X}, \chi_X$) | Band-edge orbital hybridization, optical transition and absorption strength |
-| **Charge Transfer** | Ionization energy ($I_A$), Electron affinities, Redox balance | Cation ionization tendency, charge accommodation, redox plausibility |
-| **Polarization & Screening** | Atomic polarizabilities ($\alpha$), Halide softness | Static dielectric response, Fröhlich polaron shielding, exciton attenuation |
-| **Electronic Identity** | Valence electron counts ($V_M$), Atomic numbers ($N_M$) | Dispersive $s\text{--}p$ band edges vs. localized $d$-state transport bottlenecks |
+Each $A_2BB'X_6$ composition is represented using a compact, 13-feature unrelaxed stability genome designed to avoid data leakage while preserving mechanistic interpretability:
 
-<p align="center">
-  <img src="figures/shap_summary.png" alt="SHAP Genome Decoding" width="90%"/>
-</p>
-<p align="center"><em>Figure 2: SHAP feature attribution distributions for stability classification and bandgap regression, showing 1D and 2D partial dependence response curves.</em></p>
+| Functional Role | Gene Cluster | Descriptors | Sites | Physical & Target Role |
+| :--- | :--- | :--- | :--- | :--- |
+| **Structural Existence** | **Packing (Formability)** | Ionic radii ($R_A, R_B, R_{B'}, R_X$), Tolerance factors ($t, \mu, \tau$) | A, B, B', X | Determines ionic size matching, cage filling, octahedral fit, and lattice distortion. |
+| **Thermodynamic Stability** | **Bonding (Framework Cohesion)** | Bond dissociation energies ($BE_{A-X}, BE_{B-X}, BE_{B'-X}$), Electronegativity ($\chi_{B}, \chi_{B'}, \chi_X$), Formation enthalpies ($E_A, E_B, E_{B'}, E_X$) | A, B, B', X | Controls metal-halide bond strength, network cohesion, bond polarity, and elemental stability conditioning. |
+| **Optoelectronic Function** | **Polarization (Electronic Response)** | First ionization energy ($I_A$), Electron affinity ($A_X$), Polarizability ($P_A, P_B, P_{B'}, P_X$) | A, B, B', X | Dictates cation ionization, anion charge accommodation, dielectric constant ($\epsilon_0$), and lattice softness. |
+| **Optoelectronic Function** | **Electronic Identity** | Valence electron counts ($V_A, V_B, V_{B'}, V_X$), Atomic numbers ($N_A, N_B, N_{B'}$) | A, B, B', X | Regulates orbital filling, relativistic effects, periodic trends, and band-edge dispersion. |
 
----
 
-## 🧪 Multi-Stage Screening Funnel
+
+## 🧪 Staged Inverse-Design Screening Funnel
 
 <p align="center">
   <img src="figures/screening_funnel.png" alt="Screening Funnel and Landscape" width="85%"/>
 </p>
-<p align="center"><em>Figure 3: Sequential reduction across the screening funnel and the resulting stability-function landscape.</em></p>
+<p align="center"><em>Figure 2: Multi-stage candidate reduction funnel from 13,088 compositions to 5 phase-stable semiconductors.</em></p>
 
-1. **Initial Chemical Space:** 13,088 charge-balanced formulas.
-2. **Stage I (ML Stability Classifier):** Retains predicted stable/metastable phases $\rightarrow$ **5,354 candidates (40.91%)**.
-3. **Stage II (Halide-Aware Geometry):** Enforces $0.80 \le t \le 1.10$, $\mu \ge 0.414$, $\tau < 4.18$ $\rightarrow$ **733 candidates (5.60%)**.
-4. **Stage III (Bandgap Targeting):** Gated by optoelectronic application windows $\rightarrow$ **113 candidates (0.86%)**.
-5. **Stage IV & V (DFT Phenotype Closure):** First-principles electronic and thermodynamic verification $\rightarrow$ **7 prioritized endpoints (0.05%)**.
+1. **Combinatorial Library:** 13,088 unique charge-balanced $A_2BB'X_6$ compositions.
+2. **Phase I (ML Stability Classifier):** Filters for predicted thermodynamic stability $\rightarrow$ **5,354 candidates (40.91%)**.
+3. **Phase II (Geometric Gating):** $0.80 \le t \le 1.10$, $0.414 \le \mu \le 0.732$, $\tau < 4.18$ $\rightarrow$ **733 candidates (5.60%)**.
+4. **Phase III (Bandgap Window):** Application-targeted window ($1.1\text{--}1.6\text{ eV}$) $\rightarrow$ **162 candidates (1.24%)**.
+5. **Phase IV (Revised Tolerance):** Tightened structural filter ($\tau < 4.18$) $\rightarrow$ **51 candidates (0.39%)**.
+6. **Phase V (Deployability Filter):** Removal of toxic (Pb, As, Be) and scarce noble elements $\rightarrow$ **24 candidates (0.18%)**.
+7. **Phase VI (Targeted DFT Closure):** Ground-state validation $\rightarrow$ **5 phase-stable semiconductors (0.04%)**.
 
----
 
-## 📊 Summary of Validated Candidates
+## 📊 Summary of DFT-Validated Candidates
 
 <p align="center">
-  <img src="figures/multi_phenotype_map.png" alt="Multi-Phenotype Performance Map" width="90%"/>
+  <img src="figures/application_map.png" alt="Application-Oriented Candidate Map" width="75%"/>
 </p>
-<p align="center"><em>Figure 4: Multi-phenotype performance map comparing normalized electronic, transport, dielectric, and optical absorption scores of the 7 DFT-validated lead-free double perovskites.</em></p>
+<p align="center"><em>Figure 3: Application-oriented portfolio map showing PBE bandgap ($E_g$), near-edge absorption $\alpha(E_g + 0.5\text{ eV})$, and static dielectric constant ($\epsilon_0$).</em></p>
 
-| Compound | Target Role | $E_g^{\text{DFT}}$ (eV) | Type | $\mu^*$ ($m_0$) | $\epsilon_1(0)$ | $\Delta E_{\text{xb}}$ (meV) | $\Delta H_{\text{decomp}}$ (meV/atom) |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **$\text{Cs}_2\text{SnGeBr}_6$** | Broadband Solar Absorber | 1.112 | Direct | 0.045 | 7.54 | -10.76 | +25.0 |
-| **$\text{Rb}_2\text{TeCuBr}_6$** | Ambipolar Absorber / NIR | 0.742 | Direct | 0.185 | 13.27 | -14.28 | +21.0 |
-| **$\text{Cs}_2\text{NiBaI}_6$** | Narrow-Gap / High Polarizability | 0.656 | Indirect | 0.167 | 15.28 | -6.43 | +26.0 |
-| **$\text{Cs}_2\text{AgInCl}_6$** | Electron-Selective / Window | 1.419 | Direct | 0.078 | 3.46 | -88.54 | +27.0 |
-| **$\text{K}_2\text{BePdF}_6$** | High Dielectric Polarizability | 0.876 | Direct | 0.280 | 11.27 | -29.98 | +34.0 |
-| **$\text{K}_2\text{MnCdCl}_6$** | Stable Reference Semiconductor | 1.060 | Direct | 0.182 | 5.84 | -72.63 | +28.0 |
-| **$\text{Cs}_2\text{GeSrBr}_6$** | UV-Selective / Transparent | 3.434 | Direct | 0.114 | 3.71 | -112.50 | +31.0 |
+| Compound | Space Group | $a$ (Å) | $E_g^{\text{DFT}}$ (eV) | $m_e^*$ ($m_0$) | $m_h^*$ ($m_0$) | $\epsilon_0$ | $\alpha(E_g + 0.5\text{ eV})$ ($\text{cm}^{-1}$) | Target Application |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **$\text{Cs}_2\text{CdSnBr}_6$** | $P1$ | 11.488 | 1.794 | 0.087 | 0.197 | 5.14 | $1.5 \times 10^5$ | Promising PV Absorber / Ultralight Carriers |
+| **$\text{Cs}_2\text{CdSnI}_6$** | $Fm\bar{3}m$ | 8.238 | 1.132 | 0.73 | 1.06 | 8.16 | $1.8 \times 10^5$ | Ideal PV Absorber / High Dielectric Screening |
+| **$\text{Cs}_2\text{KGaI}_6$** | $P1$ | 12.453 | 0.696 | 0.95 | 1.24 | 4.58 | $1.1 \times 10^5$ | Near-IR Detector / Narrow-Gap Semiconductor |
+| **$\text{Rb}_2\text{SnMnBr}_6$** | $P1$ | 12.400 | 1.237 | 0.18 | 2.10 | 6.15 | $1.2 \times 10^5$ | Asymmetric-Transport / Spin-Active Device |
+| **$\text{Cs}_2\text{AgAlBr}_6$** | $P1$ | 11.000 | 1.096 | 0.17 | 1.06 | 4.57 | $1.3 \times 10^5$ | Auxiliary Optoelectronic / Window Layer |
 
----
 
-## 📂 Repository Layout
 
-```text
-genome-guided-perovskite/
-├── data/
-│   ├── raw/
-│   │   └── enumerated_13088_compositions.csv
-│   └── processed/
-│       ├── chemical_genome_descriptors.csv
-│       └── reference_dataset_1221.csv
-├── dft_calculations/
-│   ├── structures_cif/             # Relaxed crystal structure CIF files
-│   ├── band_structures_pdos/       # Electronic band structures and PDOS data
-│   ├── optical_spectra/            # Complex dielectric functions & absorption spectra
-│   └── aimd_trajectories/          # 300 K NVT ab initio molecular dynamics logs
-├── figures/
-│   ├── workflow.png
-│   ├── shap_summary.png
-│   ├── screening_funnel.png
-│   ├── multi_phenotype_map.png
-│   └── origin_projects/            # OriginPro project files (.opju / .opj)
-├── notebooks/
-│   ├── 01_chemical_space_enumeration.ipynb
-│   ├── 02_genome_descriptor_engineering.ipynb
-│   ├── 03_evolutionary_surrogate_training.ipynb
-│   └── 04_shap_interpretability_decoding.ipynb
-├── src/
-│   ├── __init__.py
-│   ├── enumeration.py              # Combinatorial space builder
-│   ├── formability.py              # Geometric formability calculator (t, μ, τ)
-│   ├── descriptors.py              # 6-family chemical-genome constructor
-│   ├── models.py                   # EA hyperparameter optimization & surrogate trainers
-│   └── xai_shap.py                 # SHAP explainability engine
-├── requirements.txt
-├── environment.yml
-├── LICENSE
-└── README.md
+## 🛠️ DFT-Validated Design Rules
+
+Genotype-phenotype coupling analysis reveals three hierarchical design heuristics:
+
+1. **Formability Gate (Packing Genes):** Tolerance and octahedral factors ($t, \mu, \tau$) set the absolute steric boundary. If a candidate falls outside the structural manifold ($0.80 \le t \le 1.10$, $\tau < 4.18$), downstream electronic and optical optimization fails.
+2. **Framework Stabilization (Bonding Genes):** Within the formable manifold, maximizing $B\text{--}X$ and $B'\text{--}X$ bond dissociation energies enhances 0 K phase stability while directly boosting above-onset absorption $\alpha(E_g + 0.5\text{ eV})$ and optical conductivity $\sigma_1(\omega)$ via covalent metal-halide hybridization.
+3. **Optoelectronic Response Tuning (Polarization Genes):** Static dielectric constant ($\epsilon_0$) and exciton screening are governed by atomic polarizabilities and soft halide sublattices (e.g., $\text{I}^-$ yielding $\epsilon_0 \approx 8.16$ in $\text{Cs}_2\text{CdSnI}_6$). Delocalized $s\text{--}p$ bands (Sn, Ga) promote low effective masses, whereas localized $3d$ states (Mn) induce carrier asymmetry.
+
