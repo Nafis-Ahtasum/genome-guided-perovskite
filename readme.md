@@ -50,7 +50,7 @@ Starting from a combinatorial library of **13,088 charge-balanced, lead-free com
 
 
 
-## 🧬 Stability-Genome Descriptor Architecture
+##  Stability-Genome Descriptor Architecture
 
 Each $A_2BB'X_6$ composition is represented using a compact, 13-feature unrelaxed stability genome designed to avoid data leakage while preserving mechanistic interpretability:
 
