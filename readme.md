@@ -26,7 +26,7 @@ $^{9}$ Computational Science and Engineering, North Carolina A&T State Universit
 
 
 
-## 📌 Overview
+## Overview
 
 This repository implements an interpretable, genome-guided machine learning and Density Functional Theory (DFT) inverse-design framework to screen and discover phase-stable, lead-free all-inorganic double perovskites ($A_2BB'X_6$).
 
