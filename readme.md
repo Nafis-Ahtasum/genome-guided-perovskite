@@ -22,7 +22,7 @@ $^{6}$ Instrumentation and Control Laboratory, Center for sci-tech Research in E
 $^{7}$ Department of Computer Science and Engineering, Daffodil International University, Bangladesh  
 $^{8}$ Department of Computer Science, University of Idaho, 875 Perimeter Drive, Moscow, ID 83844, USA  
 $^{9}$ Computational Science and Engineering, North Carolina A&T State University, Greensboro, North Carolina, USA  
-$^{*}$ *Corresponding author:* `nafisahtasum666@gmail.com`
+
 
 
 
