@@ -37,7 +37,7 @@ So we put together this ML screening pipeline. We trained surrogate models on 1,
 
 
 
-### The 13 Descriptors ("Stability Genome")
+### The 13 Descriptors ("Genome")
 
 We didn't want any data leakage, so all features are calculated from basic periodic table properties and precursor data without needing relaxed DFT crystal structures:
 
@@ -64,7 +64,7 @@ We filtered the 13k compositions in stages:
 
 
 
-### Main Takeaways / Design Rules
+### Design Rules
 
 * Geometric formability is a strict gate: if a compound has a bad tolerance factor (outside 0.80 <= t <= 1.10 or tau >= 4.18), trying to optimize bandgaps is pointless.
 * Stronger B-X and B'-X bond dissociation energies help phase stability and also directly boost near-edge optical absorption.
