@@ -6,16 +6,13 @@
 
 Official code, datasets, and DFT calculations for our research preprint:
 
-> **Genome-Guided Interpretable Screening of Phase-Stable, Lead-Free Double Perovskite Absorbers for All-Inorganic Semiconductors, Sensors, and Photovoltaics with DFT-Validated Design Rules**[cite: 2]  
+> **Genome-Guided Interpretable Screening of Phase-Stable, Lead-Free Double Perovskite Absorbers for All-Inorganic Semiconductors, Sensors, and Photovoltaics with DFT-Validated Design Rules**  
 > Nafis Ahtasum $^{1,2,*}$, Sohanur Rahman Sohan $^{1,3}$, Md. Mostaq Ahmed Himel $^{1,2}$, Md. Zahid Hassan $^{3}$, Muhammad Harussani Moklis $^{1,4,5}$, Masud Rana Rashel $^{6,7}$, Hasan Jamil $^{8}$, AKM Kamrul Islam $^{9}$, Mouhaydine Tlemcani $^{6}$  
 > *arXiv:2605.22887* (2026). [Read the paper on arXiv](https://arxiv.org/abs/2605.22887)
 
 
 
-Code and datasets for our preprint:
-**"Genome-Guided Interpretable Screening of Phase-Stable, Lead-Free Double Perovskite Absorbers for All-Inorganic Semiconductors, Sensors, and Photovoltaics with DFT-Validated Design Rules"**
-Nafis Ahtasum, Sohanur Rahman Sohan, Md. Mostaq Ahmed Himel, Md. Zahid Hassan, Muhammad Harussani Moklis, Masud Rana Rashel, Hasan Jamil, AKM Kamrul Islam, Mouhaydine Tlemcani
-arXiv link: https://arxiv.org/abs/2605.22887
+
 
 
 
