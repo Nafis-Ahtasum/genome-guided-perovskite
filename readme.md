@@ -19,7 +19,7 @@ This repository implements a high-throughput, quantitative chemical-genome scree
 Starting from an unverified combinatorial space of **13,088 charge-balanced, lead-free compositions**, the workflow integrates geometric formability gating, 6-family chemical-genome descriptor encoding, evolutionary-algorithm-optimized machine learning surrogates, explainable AI (SHAP), and first-principles Density Functional Theory (DFT) phenotype closure.
 
 <p align="center">
-  <img src="figures/workflow.png" alt="Genome-Guided Discovery Workflow" width="85%"/>
+  <img src="[figures/workflow.png](https://github.com/Nafis-Ahtasum/genome-guided-perovskite/blob/main/fig%203.png)" alt="Genome-Guided Discovery Workflow" width="85%"/>
 </p>
 <p align="center"><em>Figure 1: Hierarchical discovery framework combining chemical-space construction, halide-aware formability filtering, chemical-genome descriptor encoding, evolutionary ML surrogate modeling, multi-objective screening, and DFT phenotype closure.</em></p>
 
